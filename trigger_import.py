@@ -29,7 +29,7 @@ import urllib.parse
 
 # ============ CONFIGURAZIONE ============
 # Sostituisci con il tuo dominio reale (già compilato)
-SITE_URL = "https://provaliferadio.great-site.net"
+SITE_URL = "https://liferadio.rf.gd"
 # La password del tuo admin panel (uguale a ACCESS_KEY in import-rockol.php)
 ACCESS_KEY = "BARTOLO1"
 # ========================================
