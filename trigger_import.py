@@ -35,7 +35,7 @@ ACCESS_KEY = "BARTOLO1"
 # ========================================
 
 # Percorso dello script PHP sul server
-SCRIPT_URL = f"{SITE_URL}/api/import-rockol.php?key={ACCESS_KEY}"
+SCRIPT_URL = f"{SITE_URL}/api/import-radioitalia.php?key={ACCESS_KEY}"
 
 # User-Agent da browser (ImportFree lo richiede)
 USER_AGENT = (
