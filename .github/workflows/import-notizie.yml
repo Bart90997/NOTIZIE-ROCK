@@ -1,0 +1,26 @@
+name: Import notizie giornaliero
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # 06:00 UTC = 08:00 ora italiana
+  workflow_dispatch:       # permette anche il lancio manuale
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: curl, openssl, mbstring
+
+      - name: Test bypass challenge InfinityFree (check)
+        run: php tools/trigger-import.php check key="${{ secrets.SITE_KEY }}" site="${{ secrets.SITE_URL || 'https://liferadio.rf.gd' }}"
+
+      - name: Import notizie da All Music Italia
+        run: php tools/trigger-import.php key="${{ secrets.SITE_KEY }}" site="${{ secrets.SITE_URL || 'https://liferadio.rf.gd' }}"
