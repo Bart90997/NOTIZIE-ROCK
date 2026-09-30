@@ -34,7 +34,7 @@
  */
 
 /* ---------- CONFIGURAZIONE ---------- */
-$SITE = 'https://liferadio.rf.gd';          // dominio del sito
+$SITE = 'https://liferadio.liceofermiaversa.edu.it';          // dominio del sito
 $KEY  = 'BARTOLO1';                          // stessa key dell'import (cambiala se la cambi nei PHP)
 $UA   = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
